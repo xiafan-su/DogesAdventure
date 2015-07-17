@@ -121,6 +121,7 @@ MonoBehaviour:
   spawnTime: 3
   spawnPoints:
   - {fileID: 1176278020}
+  manager: {fileID: 1863960169}
 --- !u!4 &215839411
 Transform:
   m_ObjectHideFlags: 0
@@ -149,6 +150,7 @@ MonoBehaviour:
   spawnTime: 10
   spawnPoints:
   - {fileID: 492786271}
+  manager: {fileID: 1863960169}
 --- !u!114 &215839413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +167,7 @@ MonoBehaviour:
   spawnTime: 5
   spawnPoints:
   - {fileID: 2099828100}
+  manager: {fileID: 1863960169}
 --- !u!1 &308508270
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +835,7 @@ GameObject:
   - 114: {fileID: 1863960170}
   - 114: {fileID: 1863960169}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: WaveText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Waves: 1/5'
 --- !u!222 &1863960168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -898,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e378bc199fbd343bceabbd3a16d73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waves: 0
 --- !u!114 &1863960170
 MonoBehaviour:
   m_ObjectHideFlags: 0

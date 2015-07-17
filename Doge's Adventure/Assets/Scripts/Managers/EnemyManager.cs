@@ -6,13 +6,36 @@ public class EnemyManager : MonoBehaviour
     public GameObject enemy;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
+	public ScoreManager manager;
+	private float time = 0;
 
 
     void Start ()
     {
-        InvokeRepeating ("Spawn", spawnTime, spawnTime);
+		generateEnemy (manager.waves);
+        //InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
+	void Update() {
+
+		/*while (manager.waves < 3) {
+			generateEnemy(manager.waves);
+			manager.waves++;
+		}*/
+		time += Time.deltaTime;
+		if (time >= 10) {
+			manager.addWave();
+			generateEnemy (manager.waves);
+			time = 0;
+		}
+
+	}
+
+	public void generateEnemy(int wave)
+	{
+		for(int i = 0; i < wave; i++)
+			Invoke ("Spawn", spawnTime);	
+	}
 
     void Spawn ()
     {
