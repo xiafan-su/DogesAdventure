@@ -3,38 +3,40 @@
 public class EnemyManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-    public GameObject enemy;
+    public GameObject enemyBunny;
+	public GameObject enemyBear;
+	public GameObject enemyEphant;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
-	public ScoreManager manager;
-	private float time = 0;
+	public WavesManager manager;
+	public int enemyCount;
 
 
     void Start ()
     {
+		enemyCount = 0;
 		generateEnemy (manager.waves);
         //InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
 	void Update() {
-
-		/*while (manager.waves < 3) {
-			generateEnemy(manager.waves);
-			manager.waves++;
-		}*/
-		time += Time.deltaTime;
-		if (time >= 10) {
+		Debug.Log (enemyCount);
+		if (enemyCount == 0 && manager.waves < 5) {
 			manager.addWave();
-			generateEnemy (manager.waves);
-			time = 0;
+			generateEnemy(manager.waves);
 		}
 
+		if (enemyCount == 0 && manager.waves == 5 && playerHealth.currentHealth > 0f) {
+		
+		}
 	}
 
 	public void generateEnemy(int wave)
 	{
-		for(int i = 0; i < wave; i++)
-			Invoke ("Spawn", spawnTime);	
+		for (int i = 0; i < wave; i++) {
+			Invoke ("Spawn", 0);
+		}
+	
 	}
 
     void Spawn ()
@@ -46,6 +48,11 @@ public class EnemyManager : MonoBehaviour
 
         //int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
-        Instantiate (enemy, spawnPoints[0].position, spawnPoints[0].rotation);
+		Instantiate (enemyBunny, spawnPoints[0].position, spawnPoints[0].rotation);
+		enemyCount++;
+		Instantiate (enemyBear, spawnPoints [1].position, spawnPoints [1].rotation);
+		enemyCount++;
+		Instantiate (enemyEphant, spawnPoints [2].position, spawnPoints [2].rotation);
+		enemyCount++;
     }
 }

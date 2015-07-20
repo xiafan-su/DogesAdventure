@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 		damaged = true;
 
 		currentHealth -= amount;
-
+		Debug.Log ("current heal" + currentHealth);
 		healthSlider.value = currentHealth;
 
 		playerAudio.Play ();

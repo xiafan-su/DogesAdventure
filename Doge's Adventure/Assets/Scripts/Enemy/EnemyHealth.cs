@@ -58,6 +58,9 @@ public class EnemyHealth : MonoBehaviour
 
 		enemyAudio.clip = deathClip;
 		enemyAudio.Play ();
+		// Count down the enemy number
+		EnemyManager manager = GameObject.Find ("EnemyManager").GetComponent<EnemyManager>();
+		manager.enemyCount--;
 	}
 
 	public void StartSinking ()
