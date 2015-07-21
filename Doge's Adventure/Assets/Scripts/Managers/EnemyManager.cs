@@ -20,15 +20,11 @@ public class EnemyManager : MonoBehaviour
     }
 
 	void Update() {
-		Debug.Log (enemyCount);
 		if (enemyCount == 0 && manager.waves < 5) {
 			manager.addWave();
 			generateEnemy(manager.waves);
 		}
 
-		if (enemyCount == 0 && manager.waves == 5 && playerHealth.currentHealth > 0f) {
-		
-		}
 	}
 
 	public void generateEnemy(int wave)

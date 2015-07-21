@@ -4,18 +4,24 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
+	Animator anim;
+
     public static int score;
-	
-	Text text;
-	
+	bool isTrigger = false;
+
 	void Awake () {
-		text = GetComponent <Text> ();
+		anim = GetComponent<Animator>();
 		score = 0;
 	}
 
 	
 	void Update ()
 	{
+		if (!isTrigger) {
+			anim.SetTrigger("Win");
+			isTrigger = true;
+			Debug.Log("Win");
+		}
 
 	}
 }
