@@ -241,8 +241,9 @@ MonoBehaviour:
   - {fileID: 1176278020}
   - {fileID: 2099828100}
   - {fileID: 492786271}
-  manager: {fileID: 1863960169}
+  wave_manager: {fileID: 1863960169}
   enemyCount: 0
+  final: 0
 --- !u!4 &215839411
 Transform:
   m_ObjectHideFlags: 0
@@ -629,6 +630,10 @@ Prefab:
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11429292, guid: 32c741147cd69d646a478d6d7f16be95, type: 2}
+      propertyPath: damagePerShot
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32c741147cd69d646a478d6d7f16be95, type: 2}
   m_IsPrefabParent: 0
@@ -1014,6 +1019,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.00000036
       objectReference: {fileID: 0}
+    - target: {fileID: 11491086, guid: 60203d15a3156433ead0a6a2eb5a09d0, type: 2}
+      propertyPath: wave_manager
+      value: 
+      objectReference: {fileID: 1863960169}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60203d15a3156433ead0a6a2eb5a09d0, type: 2}
   m_IsPrefabParent: 0
@@ -1988,6 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: 0
+  TOTALWAVES: 0
 --- !u!114 &1863960170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2396,6 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e378bc199fbd343bceabbd3a16d73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 215839410}
 --- !u!1 &1990925668
 GameObject:
   m_ObjectHideFlags: 0
