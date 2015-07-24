@@ -1428,6 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 215839410}
+  health: {fileID: 944917283}
 --- !u!1 &1990925668
 GameObject:
   m_ObjectHideFlags: 0

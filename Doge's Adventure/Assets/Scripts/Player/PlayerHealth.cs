@@ -52,6 +52,11 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
+	public void Win() {
+		playerMovement.enabled = false;
+		playerShooting.enabled = false;
+	}
+
 	void Death ()
 	{
 		isDead = true;
