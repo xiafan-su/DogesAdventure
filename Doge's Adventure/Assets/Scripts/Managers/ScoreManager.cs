@@ -5,6 +5,7 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour
 {
 	Animator anim;
+	public EnemyManager manager;
 
     public static int score;
 	bool isTrigger = false;
@@ -17,11 +18,14 @@ public class ScoreManager : MonoBehaviour
 	
 	void Update ()
 	{
-		if (!isTrigger) {
+		if (manager.enemyCount == 0 && manager.final) {
 			anim.SetTrigger("Win");
-			isTrigger = true;
-			Debug.Log("Win");
 		}
+		//if (!isTrigger) {
+		//	anim.SetTrigger("Win");
+		//	isTrigger = true;
+		//	Debug.Log("Win");
+		//}
 
 	}
 }

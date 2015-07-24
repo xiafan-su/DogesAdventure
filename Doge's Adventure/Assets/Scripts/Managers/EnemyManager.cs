@@ -8,22 +8,26 @@ public class EnemyManager : MonoBehaviour
 	public GameObject enemyEphant;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
-	public WavesManager manager;
+	public WavesManager wave_manager;
 	public int enemyCount;
 
-
+	public bool final;
     void Start ()
     {
+
+		final = false;
 		enemyCount = 0;
-		generateEnemy (manager.waves);
+		generateEnemy (wave_manager.waves);
         //InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
 	void Update() {
-		if (enemyCount == 0 && manager.waves < 5) {
-			manager.addWave();
-			generateEnemy(manager.waves);
+		if (enemyCount == 0 && wave_manager.waves < wave_manager.TOTALWAVES) {
+			wave_manager.addWave();
+			generateEnemy(wave_manager.waves);
+
 		}
+
 
 	}
 
@@ -50,5 +54,9 @@ public class EnemyManager : MonoBehaviour
 		enemyCount++;
 		Instantiate (enemyEphant, spawnPoints [2].position, spawnPoints [2].rotation);
 		enemyCount++;
+		if (wave_manager.waves == wave_manager.TOTALWAVES) {
+			
+			final=true;
+		}
     }
 }
