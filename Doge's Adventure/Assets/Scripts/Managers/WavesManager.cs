@@ -22,5 +22,6 @@ public class WavesManager : MonoBehaviour {
 	void Update ()
 	{
 		text.text = "Waves: " + waves + "/" + TOTALWAVES;
+
 	}
 }
