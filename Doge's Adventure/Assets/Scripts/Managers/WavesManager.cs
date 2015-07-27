@@ -15,8 +15,10 @@ public class WavesManager : MonoBehaviour {
 	}
 	
 	public void addWave() {
-		if(waves < TOTALWAVES)
+		if (waves < TOTALWAVES) {
+			ScoreManager.score = ScoreManager.score + 100*waves;
 			waves++;
+		}
 	}
 	
 	void Update ()

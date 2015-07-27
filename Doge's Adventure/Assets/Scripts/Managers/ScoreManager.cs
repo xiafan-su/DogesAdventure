@@ -9,10 +9,11 @@ public class ScoreManager : MonoBehaviour
 	public PlayerHealth health;
 
     public static int score;
-
+	Text text;
 	void Awake () {
 		anim = GetComponent<Animator>();
 		score = 0;
+		text = GetComponent <Text> ();
 	}
 
 	
@@ -22,6 +23,8 @@ public class ScoreManager : MonoBehaviour
 			health.Win();
 			anim.SetTrigger("Win");
 		}
+		if (text!=null)
+		text.text = "Score: " + score;
 		//if (!isTrigger) {
 		//	anim.SetTrigger("Win");
 		//	isTrigger = true;
