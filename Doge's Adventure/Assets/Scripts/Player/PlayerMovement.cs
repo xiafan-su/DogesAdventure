@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
+
+	bool grounded = true;				// Whether player is on the ground
+	public float jumpPower = 500;			// The jumpPower
 	
 	void Awake ()
 	{
@@ -30,16 +33,19 @@ public class PlayerMovement : MonoBehaviour
 		Move (h, v);
 		
 		// Turn the player to face the mouse cursor.
-		Turning ();
+		//Turning ();
 		
 		// Animate the player.
 		Animating (h, v);
+
+		Jump ();
 	}
 	
 	void Move (float h, float v)
 	{
 		// Set the movement vector based on the axis input.
 		movement.Set (h, 0f, v);
+		movement = transform.TransformDirection(movement);
 		
 		// Normalise the movement vector and make it proportional to the speed per second.
 		movement = movement.normalized * speed * Time.deltaTime;
@@ -49,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void Turning ()
-	{
+	{/*
 		// Create a ray from the mouse cursor on screen in the direction of the camera.
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		
@@ -69,9 +75,24 @@ public class PlayerMovement : MonoBehaviour
 			
 			// Set the player's rotation to this new rotation.
 			playerRigidbody.MoveRotation (newRotation);
-		}
+		}*/
 	}
 	
+	void Jump ()
+	{
+		if (!grounded && playerRigidbody.velocity.y == 0) {
+			grounded = true;
+		}
+		   
+		if (Input.GetKeyDown ("space") && grounded == true) {
+			//if (Input.GetButtonDown("Jump") && grounded == true) {
+			//playerRigidbody.AddForce (transform.up * jumpPower);
+			playerRigidbody.AddForce (transform.up * jumpPower);
+			//playerRigidbody.MovePosition (transform.up * jumpPower);
+			grounded = false;
+		}
+	}
+
 	void Animating (float h, float v)
 	{
 		// Create a boolean that is true if either of the input axes is non-zero.
