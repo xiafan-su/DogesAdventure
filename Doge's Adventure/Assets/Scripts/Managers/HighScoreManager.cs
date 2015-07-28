@@ -31,6 +31,10 @@ public class HighScoreManager : MonoBehaviour {
 	{
 		StartCoroutine(GetScores());
 	}
+	public void restart()
+	{
+		Application.LoadLevel (0);
+	}
 	public string Md5Sum(string strToEncrypt)
 	{
 		System.Text.UTF8Encoding ue = new System.Text.UTF8Encoding();

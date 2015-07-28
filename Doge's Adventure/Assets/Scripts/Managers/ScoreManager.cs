@@ -20,16 +20,20 @@ public class ScoreManager : MonoBehaviour
 		pushed = false;
 	}
 
+	public void PushToServer()
+	{
+		if (!pushed){
+			highscore.addscores(score);
+			pushed=true;
+		}
+	}
 	
 	void Update ()
 	{
 		if (manager.enemyCount == 0 && manager.final) {
 			health.Win();
 			anim.SetTrigger("Win");
-			if (!pushed){
-				highscore.addscores(score);
-				pushed=true;
-			}
+			PushToServer();
 			time += Time.deltaTime;
 			if (time >4){
 				Application.LoadLevel (2);
