@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour
 	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
-//	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 
+	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
+	Collider playerCollide;
 	bool grounded = true;				// Whether player is on the ground
 	public float jumpPower = 500;			// The jumpPower
 	
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 		// Set up references.
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
+		playerCollide = GetComponent <CapsuleCollider> ();
 	}
 	
 	void FixedUpdate ()
@@ -39,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 		Animating (h, v);
 
 		Jump ();
+
+		HighJump ();
 	}
 	
 	void Move (float h, float v)
@@ -80,17 +84,33 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Jump ()
 	{
-		if (!grounded && playerRigidbody.velocity.y == 0) {
+		if (playerCollide.isTrigger) {
 			grounded = true;
 		}
-		   
 		if (Input.GetKeyDown ("space") && grounded == true) {
 			//if (Input.GetButtonDown("Jump") && grounded == true) {
 			//playerRigidbody.AddForce (transform.up * jumpPower);
 			playerRigidbody.AddForce (transform.up * jumpPower);
 			//playerRigidbody.MovePosition (transform.up * jumpPower);
 			grounded = false;
+			playerCollide.isTrigger = true;
 		}
+	}
+
+	void HighJump ()
+	{
+		if (playerCollide.isTrigger) {
+			grounded = true;
+		}
+		if (Input.GetKeyDown ("f") && grounded == true) {
+			//if (Input.GetButtonDown("Jump") && grounded == true) {
+			//playerRigidbody.AddForce (transform.up * jumpPower);
+			playerRigidbody.AddForce (transform.up * 10000);
+			//playerRigidbody.MovePosition (transform.up * jumpPower);
+			grounded = false;
+			playerCollide.isTrigger = true;
+		}
+
 	}
 
 	void Animating (float h, float v)
