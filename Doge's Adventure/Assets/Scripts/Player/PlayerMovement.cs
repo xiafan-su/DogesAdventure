@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
 		Animating (h, v);
 
 		Jump ();
+
+		HighJump ();
 	}
 	
 	void Move (float h, float v)
@@ -92,6 +94,22 @@ public class PlayerMovement : MonoBehaviour
 			grounded = false;
 			playerCollide.isTrigger = true;
 		}
+	}
+
+	void HighJump ()
+	{
+		if (playerCollide.isTrigger) {
+			grounded = true;
+		}
+		if (Input.GetKeyDown ("f") && grounded == true) {
+			//if (Input.GetButtonDown("Jump") && grounded == true) {
+			//playerRigidbody.AddForce (transform.up * jumpPower);
+			playerRigidbody.AddForce (transform.up * 10000);
+			//playerRigidbody.MovePosition (transform.up * jumpPower);
+			grounded = false;
+			playerCollide.isTrigger = true;
+		}
+
 	}
 
 	void Animating (float h, float v)
