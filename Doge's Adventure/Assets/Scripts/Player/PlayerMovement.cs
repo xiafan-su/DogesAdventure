@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (playerCollide.isTrigger) {
 			grounded = true;
+
 		}
 		if (Input.GetKeyDown ("f") && grounded == true) {
 			//if (Input.GetButtonDown("Jump") && grounded == true) {
@@ -110,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 			grounded = false;
 			playerCollide.isTrigger = true;
 		}
+
 
 	}
 
