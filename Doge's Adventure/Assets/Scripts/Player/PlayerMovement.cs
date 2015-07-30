@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
 	bool grounded = true;				// Whether player is on the ground
 	public float jumpPower = 500;			// The jumpPower
 	public bool running = false;
-	
+
+	AudioSource playerAudio;
+	public AudioClip coinClip;
+
 	void Awake ()
 	{
 		// Create a layer mask for the floor layer.
@@ -137,4 +140,21 @@ public class PlayerMovement : MonoBehaviour
 		// Tell the animator whether or not the player is walking.
 		anim.SetBool ("IsWalking", walking);
 	}
+
+
+	void OnCollisionEnter (Collision col)
+	{
+		if(col.gameObject.tag == "DogeCoin")
+		{
+			Destroy(col.gameObject);
+			playerAudio = GetComponent<AudioSource>();
+			AudioClip tmp = playerAudio.clip;
+			playerAudio.clip = coinClip;
+			playerAudio.Play ();
+			//playerAudio.clip = tmp;
+		}
+	}
+
+
+
 }
