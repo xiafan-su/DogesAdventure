@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	Collider playerCollide;
 	bool grounded = true;				// Whether player is on the ground
 	public float jumpPower = 500;			// The jumpPower
+	public bool running = false;
 	
 	void Awake ()
 	{
@@ -30,7 +31,12 @@ public class PlayerMovement : MonoBehaviour
 		// Store the input axes.
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
-		
+
+		if (Input.GetKeyDown (KeyCode.LeftShift) || Input.GetKeyDown (KeyCode.RightShift))
+			running = true;
+		if (Input.GetKeyUp (KeyCode.LeftShift) || Input.GetKeyUp (KeyCode.RightShift))
+			running = false;
+
 		// Move the player around the scene.
 		Move (h, v);
 		
@@ -52,7 +58,10 @@ public class PlayerMovement : MonoBehaviour
 		movement = transform.TransformDirection(movement);
 		
 		// Normalise the movement vector and make it proportional to the speed per second.
-		movement = movement.normalized * speed * Time.deltaTime;
+		float tmpSpeed = speed;
+		if (running)
+			tmpSpeed = speed * 3;
+		movement = movement.normalized * tmpSpeed * Time.deltaTime;
 		
 		// Move the player to it's current position plus the movement.
 		playerRigidbody.MovePosition (transform.position + movement);

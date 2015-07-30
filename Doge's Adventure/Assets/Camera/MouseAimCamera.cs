@@ -22,14 +22,20 @@ public class MouseAimCamera : MonoBehaviour {
 
 	void LateUpdate () {
 		float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
+		//float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
 		//horizontal = (Input.GetAxis("Mouse X") - lastHor) * rotateSpeed ;
 		//lastHor = horizontal;
 		target.transform.Rotate(0, horizontal, 0);
+		Vector3 lookAt = target.transform.position;
+		//lookAt.y = target.transform.position.y + vertical;
+		lookAt.y = target.transform.position.y + 3;
+		//cam.Rotate(0, 0, 45);
 		
 		float desiredAngle = target.transform.eulerAngles.y;
 		Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
 		transform.position = target.transform.position - (rotation * offset);
-		
-		transform.LookAt(target.transform);
+
+		transform.LookAt(lookAt);
+		//transform.LookAt(target.transform);
 	}
 }
