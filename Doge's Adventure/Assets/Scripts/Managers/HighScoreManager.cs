@@ -15,6 +15,12 @@ public class HighScoreManager : MonoBehaviour {
 	{
 		StartCoroutine(GetScores());
 		//getScores
+		if (inputf != null) {
+			if (name!=null)
+			{
+				inputf.text=name;
+			}
+		}
 	}
 	public void addNameAndStart()
 	{
