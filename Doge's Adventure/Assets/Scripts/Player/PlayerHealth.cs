@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 	PlayerShooting playerShooting;
 	bool isDead;
 	bool damaged;
+	
 
 	void Awake ()
 	{
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		currentHealth = startingHealth;
+
 	}
 
 	void Update ()
@@ -36,6 +38,8 @@ public class PlayerHealth : MonoBehaviour
 			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
 		damaged = false;
+
+
 	}
 
 	public void TakeDamage (int amount)
@@ -77,5 +81,13 @@ public class PlayerHealth : MonoBehaviour
 	public void RestartLevel ()
 	{
 		//Application.LoadLevel (Application.loadedLevel);
+	}
+
+	void OnCollisionEnter (Collision col)
+	{
+		if(col.gameObject.tag == "GreenBuff")
+		{
+			currentHealth += 2;
+		}
 	}
 }

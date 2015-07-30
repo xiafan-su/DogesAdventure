@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 	AudioSource playerAudio;
 	public AudioClip coinClip;
 
+
+
 	void Awake ()
 	{
 		// Create a layer mask for the floor layer.
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
 			AudioClip tmp = playerAudio.clip;
 			playerAudio.clip = coinClip;
 			playerAudio.Play ();
+			ScoreManager.score += 10;
 			//playerAudio.clip = tmp;
 		}
 	}
