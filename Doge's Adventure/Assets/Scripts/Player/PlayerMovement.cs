@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Jump ()
 	{
-		if (playerCollide.isTrigger) {
+		/*if (playerCollide.isTrigger) {
 			grounded = true;
 		}
 		if (Input.GetKeyDown ("space") && grounded == true) {
@@ -102,13 +102,16 @@ public class PlayerMovement : MonoBehaviour
 			playerRigidbody.AddForce (transform.up * jumpPower);
 			//playerRigidbody.MovePosition (transform.up * jumpPower);
 			grounded = false;
-			playerCollide.isTrigger = true;
-		}
+			//playerCollide.isTrigger = true;
+		}*/
+
+		if (Input.GetKeyDown ("space"))
+		    playerRigidbody.AddForce (transform.up * jumpPower);
 	}
 
 	void HighJump ()
 	{
-		if (playerCollide.isTrigger) {
+		/*if (playerCollide.isTrigger) {
 			grounded = true;
 
 		}
@@ -119,7 +122,9 @@ public class PlayerMovement : MonoBehaviour
 			//playerRigidbody.MovePosition (transform.up * jumpPower);
 			grounded = false;
 			playerCollide.isTrigger = true;
-		}
+		}*/
+		if (Input.GetKeyDown ("f"))
+			playerRigidbody.AddForce (transform.up * 1000);
 
 
 	}
