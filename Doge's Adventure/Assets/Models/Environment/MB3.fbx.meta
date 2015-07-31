@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 118c3221679bf41f1b02f1959455b13b
+timeCreated: 1438353984
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: MB1
+    100002: MB2
+    100004: //RootNode
+    100006: pCube10
+    100008: pCube10 1
+    100010: pCube10 2
+    100012: pCube10 3
+    100014: pCube10 4
+    100016: pCube7
+    100018: pCube8
+    100020: pCube9
+    100022: pCylinder1
+    100024: pCylinder10
+    100026: pCylinder10 1
+    100028: pCylinder10 2
+    100030: pCylinder10 3
+    100032: pCylinder10 4
+    100034: pCylinder11
+    100036: pCylinder11 1
+    100038: pCylinder11 2
+    100040: pCylinder11 3
+    100042: pCylinder11 4
+    100044: pCylinder12
+    100046: pCylinder12 1
+    100048: pCylinder12 2
+    100050: pCylinder12 3
+    100052: pCylinder12 4
+    100054: pCylinder13
+    100056: pCylinder13 1
+    100058: pCylinder13 2
+    100060: pCylinder13 3
+    100062: pCylinder13 4
+    100064: pCylinder14
+    100066: pCylinder14 1
+    100068: pCylinder14 2
+    100070: pCylinder14 3
+    100072: pCylinder14 4
+    100074: pCylinder15
+    100076: pCylinder15 1
+    100078: pCylinder15 2
+    100080: pCylinder15 3
+    100082: pCylinder15 4
+    100084: pCylinder16
+    100086: pCylinder16 1
+    100088: pCylinder16 2
+    100090: pCylinder16 3
+    100092: pCylinder16 4
+    100094: pCylinder17
+    100096: pCylinder17 1
+    100098: pCylinder17 2
+    100100: pCylinder17 3
+    100102: pCylinder17 4
+    100104: pCylinder18
+    100106: pCylinder18 1
+    100108: pCylinder18 2
+    100110: pCylinder18 3
+    100112: pCylinder18 4
+    100114: pCylinder2
+    100116: pCylinder3
+    100118: pCylinder4
+    100120: pCylinder5
+    100122: pCylinder6
+    100124: pCylinder7
+    100126: pCylinder8
+    100128: pCylinder9
+    100130: pCylinder9 1
+    100132: pCylinder9 2
+    100134: pCylinder9 3
+    100136: pCylinder9 4
+    100138: pSphere1
+    100140: pSphere1 1
+    100142: pSphere1 2
+    100144: pSphere1 3
+    100146: pSphere1 4
+    100148: Tower
+    100150: Tower2
+    100152: Tower3
+    100154: Tower4
+    100156: Tower5
+    100158: transform1
+    100160: transform10
+    100162: transform11
+    100164: transform12
+    100166: transform13
+    100168: transform14
+    100170: transform15
+    100172: transform16
+    100174: transform17
+    100176: transform18
+    100178: transform19
+    100180: transform2
+    100182: transform20
+    100184: transform21
+    100186: transform22
+    100188: transform23
+    100190: transform24
+    100192: transform25
+    100194: transform26
+    100196: transform27
+    100198: transform28
+    100200: transform29
+    100202: transform3
+    100204: transform30
+    100206: transform31
+    100208: transform32
+    100210: transform33
+    100212: transform34
+    100214: transform35
+    100216: transform36
+    100218: transform37
+    100220: transform38
+    100222: transform39
+    100224: transform4
+    100226: transform40
+    100228: transform41
+    100230: transform42
+    100232: transform43
+    100234: transform44
+    100236: transform45
+    100238: transform46
+    100240: transform47
+    100242: transform48
+    100244: transform49
+    100246: transform5
+    100248: transform50
+    100250: transform51
+    100252: transform52
+    100254: transform53
+    100256: transform54
+    100258: transform55
+    100260: transform56
+    100262: transform57
+    100264: transform58
+    100266: transform59
+    100268: transform6
+    100270: transform60
+    100272: transform61
+    100274: transform62
+    100276: transform63
+    100278: transform64
+    100280: transform65
+    100282: transform66
+    100284: transform67
+    100286: transform68
+    100288: transform69
+    100290: transform7
+    100292: transform70
+    100294: transform71
+    100296: transform8
+    100298: transform9
+    400000: MB1
+    400002: MB2
+    400004: //RootNode
+    400006: pCube10
+    400008: pCube10 1
+    400010: pCube10 2
+    400012: pCube10 3
+    400014: pCube10 4
+    400016: pCube7
+    400018: pCube8
+    400020: pCube9
+    400022: pCylinder1
+    400024: pCylinder10
+    400026: pCylinder10 1
+    400028: pCylinder10 2
+    400030: pCylinder10 3
+    400032: pCylinder10 4
+    400034: pCylinder11
+    400036: pCylinder11 1
+    400038: pCylinder11 2
+    400040: pCylinder11 3
+    400042: pCylinder11 4
+    400044: pCylinder12
+    400046: pCylinder12 1
+    400048: pCylinder12 2
+    400050: pCylinder12 3
+    400052: pCylinder12 4
+    400054: pCylinder13
+    400056: pCylinder13 1
+    400058: pCylinder13 2
+    400060: pCylinder13 3
+    400062: pCylinder13 4
+    400064: pCylinder14
+    400066: pCylinder14 1
+    400068: pCylinder14 2
+    400070: pCylinder14 3
+    400072: pCylinder14 4
+    400074: pCylinder15
+    400076: pCylinder15 1
+    400078: pCylinder15 2
+    400080: pCylinder15 3
+    400082: pCylinder15 4
+    400084: pCylinder16
+    400086: pCylinder16 1
+    400088: pCylinder16 2
+    400090: pCylinder16 3
+    400092: pCylinder16 4
+    400094: pCylinder17
+    400096: pCylinder17 1
+    400098: pCylinder17 2
+    400100: pCylinder17 3
+    400102: pCylinder17 4
+    400104: pCylinder18
+    400106: pCylinder18 1
+    400108: pCylinder18 2
+    400110: pCylinder18 3
+    400112: pCylinder18 4
+    400114: pCylinder2
+    400116: pCylinder3
+    400118: pCylinder4
+    400120: pCylinder5
+    400122: pCylinder6
+    400124: pCylinder7
+    400126: pCylinder8
+    400128: pCylinder9
+    400130: pCylinder9 1
+    400132: pCylinder9 2
+    400134: pCylinder9 3
+    400136: pCylinder9 4
+    400138: pSphere1
+    400140: pSphere1 1
+    400142: pSphere1 2
+    400144: pSphere1 3
+    400146: pSphere1 4
+    400148: Tower
+    400150: Tower2
+    400152: Tower3
+    400154: Tower4
+    400156: Tower5
+    400158: transform1
+    400160: transform10
+    400162: transform11
+    400164: transform12
+    400166: transform13
+    400168: transform14
+    400170: transform15
+    400172: transform16
+    400174: transform17
+    400176: transform18
+    400178: transform19
+    400180: transform2
+    400182: transform20
+    400184: transform21
+    400186: transform22
+    400188: transform23
+    400190: transform24
+    400192: transform25
+    400194: transform26
+    400196: transform27
+    400198: transform28
+    400200: transform29
+    400202: transform3
+    400204: transform30
+    400206: transform31
+    400208: transform32
+    400210: transform33
+    400212: transform34
+    400214: transform35
+    400216: transform36
+    400218: transform37
+    400220: transform38
+    400222: transform39
+    400224: transform4
+    400226: transform40
+    400228: transform41
+    400230: transform42
+    400232: transform43
+    400234: transform44
+    400236: transform45
+    400238: transform46
+    400240: transform47
+    400242: transform48
+    400244: transform49
+    400246: transform5
+    400248: transform50
+    400250: transform51
+    400252: transform52
+    400254: transform53
+    400256: transform54
+    400258: transform55
+    400260: transform56
+    400262: transform57
+    400264: transform58
+    400266: transform59
+    400268: transform6
+    400270: transform60
+    400272: transform61
+    400274: transform62
+    400276: transform63
+    400278: transform64
+    400280: transform65
+    400282: transform66
+    400284: transform67
+    400286: transform68
+    400288: transform69
+    400290: transform7
+    400292: transform70
+    400294: transform71
+    400296: transform8
+    400298: transform9
+    2300000: MB2
+    3300000: MB2
+    4300000: MB2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 180
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
