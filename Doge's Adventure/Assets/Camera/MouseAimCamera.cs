@@ -28,7 +28,7 @@ public class MouseAimCamera : MonoBehaviour {
 		target.transform.Rotate(0, horizontal, 0);
 		Vector3 lookAt = target.transform.position;
 		//lookAt.y = target.transform.position.y + vertical;
-		lookAt.y = target.transform.position.y + 3;
+		lookAt.y = target.transform.position.y + 3.5f;
 		//cam.Rotate(0, 0, 45);
 		
 		float desiredAngle = target.transform.eulerAngles.y;
