@@ -30,6 +30,8 @@ public class ScoreManager : MonoBehaviour
 	
 	void Update ()
 	{
+		if (text!=null)
+			text.text = "Score: " + score;
 		if (manager.enemyCount == 0 && manager.final) {
 			health.Win();
 			anim.SetTrigger("Win");
@@ -39,8 +41,7 @@ public class ScoreManager : MonoBehaviour
 				Application.LoadLevel (2);
 			}
 		}
-		if (text!=null)
-		text.text = "Score: " + score;
+
 		//if (!isTrigger) {
 		//	anim.SetTrigger("Win");
 		//	isTrigger = true;

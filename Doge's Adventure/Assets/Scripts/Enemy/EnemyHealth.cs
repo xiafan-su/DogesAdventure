@@ -54,6 +54,8 @@ public class EnemyHealth : MonoBehaviour
 
 		capsuleCollider.isTrigger = true;
 
+		ScoreManager.score += scoreValue;
+
 		anim.SetTrigger ("Dead");
 
 		enemyAudio.clip = deathClip;
@@ -68,7 +70,7 @@ public class EnemyHealth : MonoBehaviour
 		GetComponent <NavMeshAgent> ().enabled = false;
 		GetComponent <Rigidbody> ().isKinematic = true;
 		isSinking = true;
-		ScoreManager.score += scoreValue;
+
 		Destroy (gameObject, 2f);
 	}
 }

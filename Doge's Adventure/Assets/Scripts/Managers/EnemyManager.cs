@@ -33,6 +33,8 @@ public class EnemyManager : MonoBehaviour
 
 	public void generateEnemy(int wave)
 	{
+		enemyCount += 3 * wave;
+		print ("enemyCount:"+enemyCount);
 		for (int i = 0; i < wave; i++) {
 			Invoke ("Spawn", 0);
 		}
@@ -49,11 +51,11 @@ public class EnemyManager : MonoBehaviour
         //int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
 		Instantiate (enemyBunny, spawnPoints[0].position, spawnPoints[0].rotation);
-		enemyCount++;
+		//enemyCount++;
 		Instantiate (enemyBear, spawnPoints [1].position, spawnPoints [1].rotation);
-		enemyCount++;
+		//enemyCount++;
 		Instantiate (enemyEphant, spawnPoints [2].position, spawnPoints [2].rotation);
-		enemyCount++;
+		//enemyCount++;
 		if (wave_manager.waves == wave_manager.TOTALWAVES) {
 			
 			final=true;
