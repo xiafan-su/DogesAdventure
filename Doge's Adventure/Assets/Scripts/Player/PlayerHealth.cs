@@ -83,11 +83,11 @@ public class PlayerHealth : MonoBehaviour
 		//Application.LoadLevel (Application.loadedLevel);
 	}
 
-	void OnCollisionEnter (Collision col)
+	/*void OnCollisionEnter (Collision col)
 	{
 		if(col.gameObject.tag == "GreenBuff")
 		{
 			currentHealth += 2;
 		}
-	}
+	}*/
 }

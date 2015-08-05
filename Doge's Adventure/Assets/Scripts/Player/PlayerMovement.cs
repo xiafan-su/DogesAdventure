@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
 	//float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 	Collider playerCollide;
-	bool grounded = true;				// Whether player is on the ground
+	//bool grounded = true;				// Whether player is on the ground
 	public float jumpPower = 500;			// The jumpPower
 	public bool running = false;
 
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 
-	void OnCollisionEnter (Collision col)
+	/*void OnCollisionEnter (Collision col)
 	{
 		if(col.gameObject.tag == "DogeCoin")
 		{
@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
 			ScoreManager.score += 10;
 			//playerAudio.clip = tmp;
 		}
-	}
+	}*/
 
 
 
