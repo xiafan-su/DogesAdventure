@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour
 	Collider playerCollide;
 	//bool grounded = true;				// Whether player is on the ground
 	public float jumpPower = 500;			// The jumpPower
-	public bool running = false;
+
+	public int runningCoefficient = 2;
+	bool running = false;
 
 	AudioSource playerAudio;
 	public AudioClip coinClip;
@@ -65,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 		// Normalise the movement vector and make it proportional to the speed per second.
 		float tmpSpeed = speed;
 		if (running)
-			tmpSpeed = speed * 3;
+			tmpSpeed = speed * runningCoefficient;
 		movement = movement.normalized * tmpSpeed * Time.deltaTime;
 		
 		// Move the player to it's current position plus the movement.
