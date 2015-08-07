@@ -9257,11 +9257,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1500006, guid: f1177dffe93275645a1647b479053f8f, type: 2}
       propertyPath: minSize
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1500006, guid: f1177dffe93275645a1647b479053f8f, type: 2}
       propertyPath: maxSize
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500002, guid: f1177dffe93275645a1647b479053f8f, type: 2}
+      propertyPath: maxSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1177dffe93275645a1647b479053f8f, type: 2}
